@@ -1,0 +1,58 @@
+﻿@model GetApp.Data.Models.Exam
+@{
+    ViewBag.Title = "Details";
+}
+
+    <h2>Details for  @Model.SubjectId </h2>
+
+<div>
+    <h4>Exam</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ExamId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExamId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IndexNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IndexNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SubjectId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SubjectId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Grade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Grade)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PassedExamDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PassedExamDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ExamId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+

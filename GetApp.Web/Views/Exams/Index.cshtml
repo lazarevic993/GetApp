@@ -1,0 +1,88 @@
+﻿@model IEnumerable<GetApp.Data.Models.Exam>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Exams</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<div id="status"></div>
+<table id="examsDataTable" class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ExamId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Subject.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IndexNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SubjectId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Grade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PassedExamDate)
+            </th>
+            <th>
+                Actions
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ExamId)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => item.Subject.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IndexNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SubjectId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Grade)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PassedExamDate)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ExamId })
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ExamId })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<script>
+    $(document).ready(function () {
+        $('#studentsDataTable').DataTable();
+    });
+
+    setupConnection = (hubProxy) => {
+        hubProxy.client.newExam = (exam) => {
+            const statusDiv = document.getElementById("status");
+            statusDiv.innerHTML = `Somebody ordered an`;
+        };
+    
+    };
+
+    $(document).ready(() => {
+        var hubProxy = $.connection.examHub;
+        setupConnection(hubProxy);
+        $.connection.hub.start();
+    });
+</script>
