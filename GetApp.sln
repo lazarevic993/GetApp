@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetApp.Web", "GetApp.Web\GetApp.Web.csproj", "{95453A8D-23DE-4422-B9F4-5B488DD6DE0A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetApp.Data", "GetApp.Data\GetApp.Data.csproj", "{A1145353-02C3-43AB-AFC1-AAD111ACDF1F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|anycpu = Debug|anycpu
+		Release|anycpu = Release|anycpu
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{95453A8D-23DE-4422-B9F4-5B488DD6DE0A}.Debug|anycpu.ActiveCfg = Debug|Any CPU
+		{95453A8D-23DE-4422-B9F4-5B488DD6DE0A}.Debug|anycpu.Build.0 = Debug|Any CPU
+		{95453A8D-23DE-4422-B9F4-5B488DD6DE0A}.Release|anycpu.ActiveCfg = Release|Any CPU
+		{95453A8D-23DE-4422-B9F4-5B488DD6DE0A}.Release|anycpu.Build.0 = Release|Any CPU
+		{A1145353-02C3-43AB-AFC1-AAD111ACDF1F}.Debug|anycpu.ActiveCfg = Debug|Any CPU
+		{A1145353-02C3-43AB-AFC1-AAD111ACDF1F}.Debug|anycpu.Build.0 = Debug|Any CPU
+		{A1145353-02C3-43AB-AFC1-AAD111ACDF1F}.Release|anycpu.ActiveCfg = Release|Any CPU
+		{A1145353-02C3-43AB-AFC1-AAD111ACDF1F}.Release|anycpu.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
